@@ -22,17 +22,19 @@ class NumberNNumeralTests: XCTestCase {
         super.tearDown()
     }
     func testConvertArabicToRoman() {
-        //testClass?.convertArabicToRoman(100)
-        XCTAssertEqual(testClass?.convertArabicToRoman(1), "I","Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(3), "III", "Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(9), "IX", "Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(1066), "MLXVI", "Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(1989), "MCMLXXXIX", "Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1), "I","Unable to convert")
+        XCTAssertEqual(testClass?.convertArabicToRoman(3), "III", "Unable to convert")
+        XCTAssertEqual(testClass?.convertArabicToRoman(9), "IX", "Unable to convert")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1066), "MLXVI", "Unable to convert")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1989), "MCMLXXXIX", "Unable to convert")
         //Test case to validate negative number
         XCTAssertEqual(testClass?.convertArabicToRoman(-1), "-1", "Negative number converted")
 
       
 
+    }
+    func testConvertRomanToArab(){
+        XCTAssertEqual(testClass?.convertRomanToArab("M"), 1000, "Unable to convert")
     }
     func testExample() {
         // This is an example of a functional test case.
