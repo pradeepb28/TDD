@@ -8,15 +8,25 @@
 
 import Foundation
 public class NumberNNumerical {
-    func convertArabicToRoman(number:Int) -> String {
+    func convertArabicToRoman(var number:Int) -> String {
         
         if number > 0 {
-            if number == 1900 {
-                return "MCM"
+            var roman:String = ""
+            var repeats:Int = 0
+            let magnitude=[1000,900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+            let symbol=["M","CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+            repeats = number/1
+            for (var x = 0; number > 0; x++){
+                repeats = number/magnitude[x]
+                for (var i=1;i<=repeats;i++){
+                    roman = roman + symbol[x]
+                }
+                number = number % magnitude[x]
             }
-            return "Not equal"
+            return roman
+            
         } else {
-            return "negative number"
+            return "-1"
         }
         
         

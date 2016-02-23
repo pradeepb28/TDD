@@ -24,6 +24,8 @@ class NumberNNumeralTests: XCTestCase {
     func testConvertNumberToNumerical() {
         //testClass?.convertArabicToRoman(100)
         XCTAssertEqual(testClass?.convertArabicToRoman(1900), "MCM","Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(101), "CI", "Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(99), "XCIX", "Not Equal")
         XCTAssertNotEqual(testClass?.convertArabicToRoman(-1), "Unable to convert negative number", "Negative number converted")
 
     }
