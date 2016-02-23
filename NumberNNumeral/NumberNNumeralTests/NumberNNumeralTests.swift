@@ -34,8 +34,12 @@ class NumberNNumeralTests: XCTestCase {
 
     }
     func testConvertRomanToArab(){
-        XCTAssertEqual(testClass?.convertRomanToArab("M"), 1000, "Unable to convert")
-        XCTAssertEqual(testClass?.convertRomanToArab(""), -1, "Empty/Invalid Input")
+        XCTAssertEqual(testClass?.convertRomanToArabic("I"), 1, "Unable to convert")
+        XCTAssertEqual(testClass?.convertRomanToArabic("III"), 3, "Unable to convert")
+        XCTAssertEqual(testClass?.convertRomanToArabic("IX"), 9, "Unable to convert")
+        XCTAssertEqual(testClass?.convertRomanToArabic("MLXVI"), 1066, "Unable to convert")
+        XCTAssertEqual(testClass?.convertRomanToArabic("MCMLXXXIX"), 1989, "Unable to convert")
+
     }
     func testExample() {
         // This is an example of a functional test case.
