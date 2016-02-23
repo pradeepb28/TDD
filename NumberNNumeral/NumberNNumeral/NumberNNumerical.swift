@@ -9,9 +9,16 @@
 import Foundation
 public class NumberNNumerical {
     func convertArabicToRoman(number:Int) -> String {
-        if number == 1900 {
-            return "MCM"
+        
+        if number > 0 {
+            if number == 1900 {
+                return "MCM"
+            }
+            return "Not equal"
+        } else {
+            return "negative number"
         }
-        return "Cannot Convert"
+        
+        
     }
 }
