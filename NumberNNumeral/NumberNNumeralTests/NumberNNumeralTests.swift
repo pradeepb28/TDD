@@ -21,12 +21,17 @@ class NumberNNumeralTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    func testConvertNumberToNumerical() {
+    func testConvertArabicToRoman() {
         //testClass?.convertArabicToRoman(100)
-        XCTAssertEqual(testClass?.convertArabicToRoman(1900), "MCM","Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(101), "CI", "Not Equal")
-        XCTAssertEqual(testClass?.convertArabicToRoman(99), "XCIX", "Not Equal")
-        XCTAssertNotEqual(testClass?.convertArabicToRoman(-1), "Unable to convert negative number", "Negative number converted")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1), "I","Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(3), "III", "Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(9), "IX", "Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1066), "MLXVI", "Not Equal")
+        XCTAssertEqual(testClass?.convertArabicToRoman(1989), "MCMLXXXIX", "Not Equal")
+        //Test case to validate negative number
+        XCTAssertEqual(testClass?.convertArabicToRoman(-1), "-1", "Negative number converted")
+
+      
 
     }
     func testExample() {
