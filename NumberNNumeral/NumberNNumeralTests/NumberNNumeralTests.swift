@@ -40,6 +40,7 @@ class NumberNNumeralTests: XCTestCase {
         XCTAssertEqual(testClass?.convertRomanToArabic("MLXVI"), 1066, "Unable to convert")
         XCTAssertEqual(testClass?.convertRomanToArabic("MCMLXXXIX"), 1989, "Unable to convert")
 
+
     }
     func testExample() {
         // This is an example of a functional test case.
